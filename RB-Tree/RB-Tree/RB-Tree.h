@@ -1,5 +1,6 @@
 #include<iostream>
 #include<iomanip>
+#include<Windows.h>
 
 using namespace std;
 
@@ -38,6 +39,8 @@ private:
 
 void RBtree::postorder(node * p, int indent = 0)
 {
+	HANDLE hConsoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(hConsoleHandle, (WORD)(0 | 15));
     if(p != NULL) {
         if(p->right) {
             postorder(p->right, indent+4);
@@ -45,13 +48,20 @@ void RBtree::postorder(node * p, int indent = 0)
         if (indent) {
             std::cout << std::setw(indent) << ' ';
         }
-        if (p->right) std::cout<<" /\n" << std::setw(indent) << ' ';
-		std::cout<< p->key << "\n ";
+        if (p->right)
+			std::cout<<" /\n" << std::setw(indent) << ' ';
+
+		if(p->color == 'r')
+			SetConsoleTextAttribute(hConsoleHandle, (WORD)(0 | 4));
+
+		cout<< p->key <<"\n ";
         if(p->left) {
+			SetConsoleTextAttribute(hConsoleHandle, (WORD)(0 | 15));
             std::cout << std::setw(indent) << ' ' <<" \\\n";
             postorder(p->left, indent+4);
         }
     }
+	SetConsoleTextAttribute(hConsoleHandle, (WORD)(0 | 15));
 }
 
 void RBtree::insert()
