@@ -1,4 +1,5 @@
 #include<iostream>
+#include<iomanip>
 
 using namespace std;
 
@@ -13,8 +14,7 @@ struct node
 
 class RBtree
 {
-      node *root;
-      node *q;
+      
 public :
       RBtree()
       {
@@ -26,13 +26,33 @@ public :
 	  void disp();
 	  void search();
 private:
+	  void postorder(node* p, int indent);
+	  node *root;
+      node *q;
       void insertfix(node *);
       void leftrotate(node *);
       void rightrotate(node *);
       node* successor(node *);
       void delfix(node *);
-      void display( node *);
 };
+
+void RBtree::postorder(node * p, int indent = 0)
+{
+    if(p != NULL) {
+        if(p->right) {
+            postorder(p->right, indent+4);
+        }
+        if (indent) {
+            std::cout << std::setw(indent) << ' ';
+        }
+        if (p->right) std::cout<<" /\n" << std::setw(indent) << ' ';
+		std::cout<< p->key << "\n ";
+        if(p->left) {
+            std::cout << std::setw(indent) << ' ' <<" \\\n";
+            postorder(p->left, indent+4);
+        }
+    }
+}
 
 void RBtree::insert()
 {
@@ -376,53 +396,7 @@ node* RBtree::successor(node *p)
 
 void RBtree::disp()
 {
-     display(root);
-}
-
-void RBtree::display(node *p)
-{
-     if(root==NULL)
-     {
-          cout<<"\nEmpty Tree.";
-          return ;
-     }
-     if(p!=NULL)
-     {
-                cout<<"\n\t NODE: ";
-                cout<<"\n Key: "<<p->key;
-                cout<<"\n Colour: ";
-    if(p->color=='b')
-     cout<<"Black";
-    else
-     cout<<"Red";
-                if(p->parent!=NULL)
-                       cout<<"\n Parent: "<<p->parent->key;
-                else
-                       cout<<"\n There is no parent of the node.  ";
-                if(p->right!=NULL)
-                       cout<<"\n Right Child: "<<p->right->key;
-                else
-                       cout<<"\n There is no right child of the node.  ";
-                if(p->left!=NULL)
-                       cout<<"\n Left Child: "<<p->left->key;
-                else
-                       cout<<"\n There is no left child of the node.  ";
-                cout<<endl;
-    if(p->left)
-    {
-                 cout<<"\n\nLeft:\n";
-     display(p->left);
-    }
-    /*else
-     cout<<"\nNo Left Child.\n";*/
-    if(p->right)
-    {
-     cout<<"\n\nRight:\n";
-                 display(p->right);
-    }
-    /*else
-     cout<<"\nNo Right Child.\n"*/
-     }
+	postorder(root);
 }
 
 void RBtree::search()

@@ -25,7 +25,7 @@ int main()
                                    break;
                           case 3 : obj.search();
                                    break;
-                          case 4 : obj.disp();
+						  case 4 : obj.disp();
                                    break;
                           case 5 : y = 1;
                                    break;

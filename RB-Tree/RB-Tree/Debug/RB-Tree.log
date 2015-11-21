@@ -1,14 +1,14 @@
-﻿Построение начато 21.11.2015 12:22:26.
-     1>Проект "c:\Users\fireeagle\documents\visual studio 2012\Projects\RB-Tree\RB-Tree\RB-Tree.vcxproj" в узле 2 (целевые объекты Build).
+﻿Построение начато 21.11.2015 12:45:06.
+     1>Проект "C:\Users\FireEagle\Documents\GitHub\RB-Tree\RB-Tree\RB-Tree\RB-Tree.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>c:\users\fireeagle\documents\visual studio 2012\projects\rb-tree\rb-tree\rb-tree.h(251): warning C4553: ==: оператор не имеет результата; возможно, имелся в виду "="
+     1>c:\users\fireeagle\documents\github\rb-tree\rb-tree\rb-tree\rb-tree.h(271): warning C4553: ==: оператор не имеет результата; возможно, имелся в виду "="
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\fireeagle\documents\visual studio 2012\Projects\RB-Tree\Debug\RB-Tree.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"c:\users\fireeagle\documents\visual studio 2012\Projects\RB-Tree\Debug\RB-Tree.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\fireeagle\documents\visual studio 2012\Projects\RB-Tree\Debug\RB-Tree.lib" /MACHINE:X86 Debug\main.obj
-         RB-Tree.vcxproj -> c:\users\fireeagle\documents\visual studio 2012\Projects\RB-Tree\Debug\RB-Tree.exe
-     1>Построение проекта "c:\Users\fireeagle\documents\visual studio 2012\Projects\RB-Tree\RB-Tree\RB-Tree.vcxproj" завершено (целевые объекты Build).
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\FireEagle\Documents\GitHub\RB-Tree\RB-Tree\Debug\RB-Tree.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\FireEagle\Documents\GitHub\RB-Tree\RB-Tree\Debug\RB-Tree.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\FireEagle\Documents\GitHub\RB-Tree\RB-Tree\Debug\RB-Tree.lib" /MACHINE:X86 Debug\main.obj
+         RB-Tree.vcxproj -> C:\Users\FireEagle\Documents\GitHub\RB-Tree\RB-Tree\Debug\RB-Tree.exe
+     1>Построение проекта "C:\Users\FireEagle\Documents\GitHub\RB-Tree\RB-Tree\RB-Tree\RB-Tree.vcxproj" завершено (целевые объекты Build).
 
 Построение успешно завершено.
 
-Затраченное время: 00:00:01.06
+Затраченное время: 00:00:01.13
